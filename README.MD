@@ -2,6 +2,7 @@
 
 ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/alegrowin/azure-devops-packer?style=plastic)
 
+https://hub.docker.com/r/alegrowin/azure-devops-packer
 ## Why this image is required
 
 Running Azure DevOps jobs in container has [some requirements](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/container-phases?view=azure-devops#requirements)
@@ -48,3 +49,7 @@ steps:
 - script: |
     packer build -machine-readable ./launch-packer/amazon.json
 ```
+
+### Support
+
+I would be glad to support older version of official packer image. Let me know by opening an issue.
