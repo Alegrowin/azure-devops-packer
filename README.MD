@@ -1,5 +1,7 @@
 # azure-devops-packer
 
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/alegrowin/azure-devops-packer?style=plastic)
+
 ## Why this image is required
 
 Running Azure DevOps jobs in container has [some requirements](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/container-phases?view=azure-devops#requirements)
