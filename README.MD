@@ -29,3 +29,22 @@ docker run --rm -it -v ~/.aws:/root/.aws -w /packer -v ~/packer:/packer alegrowi
 
 ### On Azure DevOps
 
+```yaml
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+resources:
+  containers:
+  - container: packer
+    image: alegrowin/azure-devops-packer:latest
+    options: -e AWS_DEFAULT_REGION=$(AWS_DEFAULT_REGION) -e AWS_SECRET_ACCESS_KEY=$(AWS_SECRET_ACCESS_KEY) -e AWS_ACCESS_KEY_ID=$(AWS_ACCESS_KEY_ID)
+
+container: packer
+
+steps:
+- script: |
+    packer build -machine-readable ./launch-packer/amazon.json
+```
