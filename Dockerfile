@@ -1,7 +1,7 @@
 # Using this line to trigger a PR using dependabot on github from Github Action
 FROM hashicorp/packer:1.5.4 as dependency
 
-FROM node:10-alpine
+FROM node:13-alpine
 
 LABEL maintainer="Alexandre Proulx"
 LABEL "com.azure.dev.pipelines.agent.handler.node.path"="/usr/local/bin/node"
