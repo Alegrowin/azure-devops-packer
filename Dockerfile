@@ -1,5 +1,5 @@
 # Using this line to trigger a PR using dependabot on github from Github Action
-FROM hashicorp/packer:1.5.4 as dependency
+FROM hashicorp/packer:1.5.5 as dependency
 
 FROM node:10-alpine
 
